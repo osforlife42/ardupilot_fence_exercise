@@ -1,7 +1,16 @@
 # ardupilot_fence_exercise
 ardupilot fence exercise
 
-## enabling max alt fence 
+## exercise: 
+
+Let's say we want to have the capability to signal our operator when they are flying the vehicle too high or too low. 
+In this exercise what we want from you to do is to add your own message sent from the pixhawk to the mission planner so that the operator could see this message. 
+We want these heights to be configurable. 
+DO NOT invent the wheel, use the open-source and find where you can extend current capabilities in the ardupilot code.
+
+## home solution steps: 
+
+### enabling fence 
 
 check the docs here: https://ardupilot.org/copter/docs/common-geofencing-landing-page.html
 
@@ -9,10 +18,10 @@ updating the parameters:
 
 FENCE_ENABLE = 1
 FENCE_ACTION = 0 (so it won't do RTL everytime) 
-FENCE_ALT_MAX = 20 (lower it)
+FENCE_ALT_MAX = 20 (just lower it for ease)
 
 
-## updating messages sent to MissionPlanner
+### updating messages sent to MissionPlanner
 
 `git status` output: 
 
@@ -24,7 +33,6 @@ Your branch is behind 'origin/master' by 9524 commits, and can be fast-forwarded
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   .vscode/settings.json
 	modified:   ArduCopter/fence.cpp
 ```
 
