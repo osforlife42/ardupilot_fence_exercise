@@ -1,11 +1,13 @@
 # ardupilot_fence_exercise
-ardupilot fence exercise
 
 ## exercise: 
 
 Let's say we want to have the capability to signal our operator when they are flying the vehicle too high or too low. 
+
 In this exercise what we want from you to do is to add your own message sent from the pixhawk to the mission planner so that the operator could see this message. 
+
 We want these heights to be configurable. 
+
 DO NOT invent the wheel, use the open-source and find where you can extend current capabilities in the ardupilot code.
 
 ## home solution steps: 
@@ -16,10 +18,11 @@ check the docs here: https://ardupilot.org/copter/docs/common-geofencing-landing
 
 updating the parameters: 
 
+```
 FENCE_ENABLE = 1
 FENCE_ACTION = 0 (so it won't do RTL everytime) 
 FENCE_ALT_MAX = 20 (just lower it for ease)
-
+```
 
 ### updating messages sent to MissionPlanner
 
@@ -58,7 +61,7 @@ index ab9164ed72..ddca61db2c 100644
          // if the user wants some kind of response and motors are armed
 ```
 
-**important remark ! mission planner overrides fence breach message with his own, so they might not see theirs on the hud but it is shown in the messages. **
+**important remark ! mission planner overrides fence breach message with his own, so they might not see theirs on the hud but it is shown in the messages.**
 
 
 
